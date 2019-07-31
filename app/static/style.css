@@ -1,0 +1,9 @@
+table input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
