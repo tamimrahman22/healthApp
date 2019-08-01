@@ -1,0 +1,66 @@
+<html>
+
+<head>
+	<title>Consistency</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/static/assets/css/main.css" />
+	<link rel="stylesheet" href="static/style.css" type="text/css" />
+	<link rel="stylesheet" href="static/assets/js.hide.js"/>
+	
+	{{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419, -122.1419)])}}
+    {{mymap.js}}
+    {{sndmap.js}}
+
+</head>
+
+<body class="is-preload">
+	
+	<div class="topnav" id="myTopnav">
+		<a href="/index" class="active"><img src="/static/images/foodpt2.png", height="31px"</a>
+		<a href="/diet">Diet</a>
+		<a href="/exercise">Exercise</a>
+		<a href="/consistency">Locate a Gym</a>
+	  </a>
+	</div>
+	
+
+	<!-- Header -->
+	<div id="header">
+		
+		<h1>Locate a gym near you</h1>
+		<p>An important step to being consistent is
+			<br/>working on your needs regularly.</p>
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+	    <span>
+	    <!--MAP-->
+	    <h3>Enter your address</h3>
+	    <div id="map_div">
+	    {{sndmap.html}}
+	    </div>
+		</span>
+	</div>
+	
+	<footer class="major container medium">
+			<h1>Get healhty and <i>stay</i> healthy!</h1>
+		</footer>
+	<!-- Footer -->
+	<div id="footer">
+		<div class="container medium">
+			<h1>Thank You and Good Luck.</h1>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="/static/assets/js/jquery.min.js"></script>
+	<script src="/static/assets/js/browser.min.js"></script>
+	<script src="/static/assets/js/breakpoints.min.js"></script>
+	<script src="/static/assets/js/util.js"></script>
+	<script src="/static/assets/js/main.js"></script>
+
+</body>
+
+</html>
