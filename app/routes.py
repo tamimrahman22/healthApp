@@ -5,7 +5,7 @@ from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
 
 # you can set key as config
-app.config['GOOGLEMAPS_KEY'] = "AIzaSyDpEknfmsqyL1xulZ9M56HTM-yTn4Mzg8o"
+app.config['GOOGLEMAPS_KEY'] = ""
 
 # Initialize the extension
 GoogleMaps(app)
