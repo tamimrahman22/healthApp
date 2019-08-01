@@ -44,6 +44,8 @@ table input[type="submit"] {
   display: none;
 }
 
-#map_div{
-  width: 100%;
+#roundTopPic{
+    border-radius: 50%;
 }
+
+

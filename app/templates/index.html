@@ -16,11 +16,10 @@
 
 <body class="is-preload">
 	<div class="topnav" id="myTopnav">
-		<a href="/index" class="active"><img src="/static/images/foodpt2.png", height="31px"</a>
+		<a href="/" class="active"><img src="/static/images/foodpt2.png", height="31px"></a>
 		<a href="/diet">Diet</a>
 		<a href="/exercise">Exercise</a>
-		<a href="/consistency">Locate a gym</a>
-	  </a>
+		<a href="/consistency">Locate a Gym</a>
 	</div>
 
 	<!-- Header -->
@@ -35,66 +34,65 @@
 
 	<!-- Main -->
 	<div id="main">
-
-		<form class="major container medium" method="post" action='/bmi_calc'>
-			<div class='center'>
-				<h2>Tell us about yourself.</h2>
-				</br>
-				<label for="name" id="firstPage">Enter your name</label>
-				<input type='text' name='name' class="center">
-				</br>
-				<label for="age" id="firstPage">Enter your age</label>
-				<input type='text' name='age' class="center">
-				</br>
-				<label for="weight" id="firstPage">Enter your weight in pounds</label>
-				<input type='text' name='weight' class="center">
-				</br>
-				<label for="height" id="firstPage">Enter your height in inches</label>
-				<input type='text' name='height' class="center">
-				</br>
-				<!--<ul class="actions special button" type="submit" name="action">-->
-				<!--	<li><a href="/index">Submit</a></li>-->
-				<!--</ul>-->
+		{% if bmiNum == 0 %}
+			<form class="major container medium" method="post" action='/bmi_calc'>
 				<div class='center'>
-					<button class="actions special button" type="submit" name="action" >Submit
-				<!--<i class="material-icons center"></i>-->
-					</button>
+					<h2>Tell us about yourself.</h2>
+					</br>
+					<label for="name" id="firstPage">Enter your name</label>
+					<input type='text' name='name' class="center">
+					</br>
+					<label for="age" id="firstPage">Enter your age</label>
+					<input type='text' name='age' class="center">
+					</br>
+					<label for="weight" id="firstPage">Enter your weight in pounds</label>
+					<input type='text' name='weight' class="center">
+					</br>
+					<label for="height" id="firstPage">Enter your height in inches</label>
+					<input type='text' name='height' class="center">
+					</br>
+					<!--<ul class="actions special button" type="submit" name="action">-->
+					<!--	<li><a href="/index">Submit</a></li>-->
+					<!--</ul>-->
+					<div class='center'>
+						<button class="actions special button" type="submit" name="action" >Submit
+					<!--<i class="material-icons center"></i>-->
+						</button>
+					</div>
 				</div>
-
+			</form>
+			
+		{% else %}
+			<div>
+			
+			<h2>Your BMI is {{ bmiNum }}.</h2>
+			<h2>You can use your BMI number to plan your goals.</h2>
+			<h3>Use the links below to get started!</h3>
 			</div>
-		</form>
-		</br>
-		<div>
-		{% if bmiNum and (bmiNum != 0) %}
-		
-		<h2>Your BMI is {{ bmiNum }}.</h2>
-		<h2>You can use your BMI number to plan your goals.</h2>
-		<h3>Use the links below to get started!</h3>
+			<div class="box alt container">
+				<section class="feature left">
+					<a href="/diet" class="image icon solid"><img src="/static/images/food for project.jpg" alt="" /></a>
+					<div class="content">
+						<h3>Diet</h3>
+						<p>Many believe the myth that eating is only for gaining weight. This is wrong! Eating healthy is one of the most important factors for gaining weight, losing weight, and staying fit.</p>
+					</div>
+				</section>
+				<section class="feature right">
+					<a href="/exercise" class="image icon solid"><img src="/static/images/exercise.jpg" alt="" /></a>
+					<div class="content">
+						<h3>Exercise</h3>
+						<p>"Exercise to stimulate, not to annihilate. The world wasn't formed in a day, and neither were we. Set small goals and build upon them."</br>Lee Haney</p>
+					</div>
+				</section>
+				<section class="feature left">
+					<a href="/consistency" class="image icon solid"><img src="/static/images/time.jpg" alt="" /></a>
+					<div class="content">
+						<h3>Consistency</h3>
+						<p>Don't follow our suggestions for just one day. Consistency is the key to building better habits and improving your overall health. </p>
+					</div>
+				</section>
+			</div>
 		{% endif %}
-		</div>
-		<div class="box alt container">
-			<section class="feature left">
-				<a href="/diet" class="image icon solid"><img src="/static/images/food for project.jpg" alt="" /></a>
-				<div class="content">
-					<h3>Diet</h3>
-					<p>Many believe the myth that eating is only for gaining weight. This is wrong! Eating healthy is one of the most important factors for gaining weight, losing weight, and staying fit.</p>
-				</div>
-			</section>
-			<section class="feature right">
-				<a href="/exercise" class="image icon solid"><img src="/static/images/exercise.jpg" alt="" /></a>
-				<div class="content">
-					<h3>Exercise</h3>
-					<p>"Exercise to stimulate, not to annihilate. The world wasn't formed in a day, and neither were we. Set small goals and build upon them."</br>Lee Haney</p>
-				</div>
-			</section>
-			<section class="feature left">
-				<a href="/consistency" class="image icon solid"><img src="/static/images/time.jpg" alt="" /></a>
-				<div class="content">
-					<h3>Consistency</h3>
-					<p>Don't follow our suggestions for just one day. Consistency is the key to building better habits and improving your overall health. </p>
-				</div>
-			</section>
-		</div>
 
 		<!--
 				<div class="box container">

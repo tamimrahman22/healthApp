@@ -17,17 +17,18 @@
 <body class="is-preload">
 	
 	<div class="topnav" id="myTopnav">
-		<a href="/index" class="active"><img src="/static/images/foodpt2.png", height="31px"</a>
+		<a href="/index" class="active"><img src="/static/images/foodpt2.png", height="31px"></a>
 		<a href="/diet">Diet</a>
 		<a href="/exercise">Exercise</a>
 		<a href="/consistency">Locate a Gym</a>
-	  </a>
 	</div>
 	
 
 	<!-- Header -->
 	<div id="header">
-		
+		<span>
+			<img src="/static/images/gym.jpeg", id='roundTopPic' height='500px', width='50%'></img>
+		</span>
 		<h1>Locate a gym near you</h1>
 		<p>An important step to being consistent is
 			<br/>working on your needs regularly.</p>
@@ -37,9 +38,10 @@
 	<div id="main">
 	    <span>
 	    <!--MAP-->
-	    <h3>Enter your address</h3>
-	    <div id="map_div">
-	    {{sndmap.html}}
+	    <h3>Here are the closest gyms to you</h3>
+	    <div>
+	    <!--{{sndmap.html}}-->
+	    	<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d12089.4337167336!2d-73.9799992!3d40.7541407!3m2!1i1024!2i768!4f13.1!2m1!1sgyms+near+277+park+ave!5e0!3m2!1sen!2sus!4v1564683970395!5m2!1sen!2sus" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 	    </div>
 		</span>
 	</div>

@@ -5,19 +5,20 @@ from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
 
 # you can set key as config
-app.config['GOOGLEMAPS_KEY'] = ""
+app.config['GOOGLEMAPS_KEY'] = "AIzaSyAKP1rCVhlUayr84Mw2TvWl4NadSrz2wM4"
 
 # Initialize the extension
 GoogleMaps(app)
 
 bmiNum = 0
 weight_range = 'normal weight'
+print(bmiNum)
 
 @app.route('/')
 @app.route('/index')
 def index():
-    bmiNum = 0
-    return render_template('index.html')
+    global bmiNum
+    return render_template('index.html', bmiNum = bmiNum)
 
 @app.route('/bmi_calc', methods = ["GET", "POST"])
 def bmi_calc():

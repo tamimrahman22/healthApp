@@ -14,14 +14,13 @@
 		<a href="/index" class="active"><img src="/static/images/foodpt2.png", height="31px"></a>
 		<a href="/diet">Diet</a>
 		<a href="/exercise">Exercise</a>
-		<a href="/consistency">Locate a gym</a>
-	  </a>
+		<a href="/consistency">Locate a Gym</a>
 	</div>
 
 	<!-- Header -->
 	<div id="header">
 		<span>
-					<img src="/static/images/exerciseOption2.jpg"></img>
+					<img src="/static/images/exerciseOption2.jpg", id='roundTopPic', height='500px', width='50%'></img>
 				</span>
 		<h1>Exercise Tips</h1>
 		<p>Exercises you can add to your routine
@@ -35,9 +34,9 @@
 		{%if bmiNum == 0 %}
 			<h2>Please return to the homepage to submit the necessary information.</h2>
 		{% else %}
-			<h2>Your BMI is {{ bmiNum }}.</h2>
+			<h2>Your BMI is {{ bmiNum }}</h2>
 			<h2>According to your BMI, you are {{weight_range}}.</h2>
-			    <h3 class="center">The first step to continuing a healthy lifestyle is eating smarter.</h3>
+			    <h3 class="center">Add these to your daily routine for long term results.</h3>
 			</br>
 			</br>
 			{% if weight_range == 'normal weight' %}
