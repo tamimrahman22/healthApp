@@ -15,7 +15,7 @@ weight_range = 'normal weight'
 print(bmiNum)
 
 @app.route('/')
-@app.route('/index')
+@app.route('/index', methods = ['GET', 'POST'])
 def index():
     global bmiNum
     return render_template('index.html', bmiNum = bmiNum)
@@ -83,5 +83,12 @@ def consistency():
 
 if __name__ == "__main__":
     app.run(debug=True)
+@app.route('/newGuest')
+def newGuest():
+    global bmiNum
+    bmiNum = 0
+    global weight_range
+    weight_range = ' '
+    return render_template('index.html', bmiNum = bmiNum, weight_range= weight_range)
     
     
